@@ -3,25 +3,23 @@ import fs from "fs";
 import path from "path";
 import { Client, Intents } from "discord.js";
 
-(async () => {
-  const triggers = (
-    await fs.promises.readFile(path.resolve(__dirname, "..", "triggers.txt"), {
-      encoding: "utf-8",
-    })
-  )
-    .split("\n")
-    .map((row) => row.trim().toLowerCase())
-    .filter((row) => row)
-    .concat("<@!902522751930224660>", "<@!435448025301647361>");
-
-  const responces = (
-    await fs.promises.readFile(path.resolve(__dirname, "..", "abe.txt"), {
+const readlines = async (filename: string): Promise<string[]> =>
+  (
+    await fs.promises.readFile(path.resolve(__dirname, "..", filename), {
       encoding: "utf-8",
     })
   )
     .split("\n")
     .map((row) => row.trim().toLowerCase())
     .filter((row) => row);
+
+(async () => {
+  const triggers = (await readlines("triggers.txt")).concat(
+    "<@!902522751930224660>", // @AbeBot
+    "<@!435448025301647361>" // @阿部健太朗
+  );
+
+  const responces = await readlines("abe.txt");
 
   http
     .createServer(function (req, res) {
