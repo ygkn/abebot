@@ -42,7 +42,11 @@ import { Client, Intents } from "discord.js";
     if (message.author.bot) return;
     console.log(`[MESSAGE]: ${message.content}`);
 
-    if (triggers.some((trigger) => message.content?.toLowerCase().includes(trigger))) {
+    if (
+      triggers.some((trigger) =>
+        message.content?.toLowerCase().includes(trigger)
+      )
+    ) {
       message.channel.send(
         responces[Math.round(Math.random() * responces.length)]
       );
