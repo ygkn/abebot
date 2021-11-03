@@ -10,7 +10,7 @@ import { Client, Intents } from "discord.js";
     })
   )
     .split("\n")
-    .map((row) => row.trim())
+    .map((row) => row.trim().toLowerCase())
     .filter((row) => row)
     .concat("<@!902522751930224660>", "<@!435448025301647361>");
 
@@ -20,7 +20,7 @@ import { Client, Intents } from "discord.js";
     })
   )
     .split("\n")
-    .map((row) => row.trim())
+    .map((row) => row.trim().toLowerCase())
     .filter((row) => row);
 
   http
@@ -42,7 +42,7 @@ import { Client, Intents } from "discord.js";
     if (message.author.bot) return;
     console.log(`[MESSAGE]: ${message.content}`);
 
-    if (triggers.some((trigger) => message.content?.includes(trigger))) {
+    if (triggers.some((trigger) => message.content?.toLowerCase().includes(trigger))) {
       message.channel.send(
         responces[Math.round(Math.random() * responces.length)]
       );
