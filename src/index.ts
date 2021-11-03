@@ -48,7 +48,7 @@ import { Client, Intents } from "discord.js";
       )
     ) {
       message.channel.send(
-        responces[Math.round(Math.random() * responces.length)]
+        responces[Math.floor(Math.random() * responces.length)]
       );
     }
   });
