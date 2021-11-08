@@ -20,7 +20,7 @@ const readlines = async (filename: string): Promise<string[]> =>
     .filter((row) => row);
 
 const serveHttp = () =>
-  listenAndServe(":8080", () => new Response("online", { status: 200 }));
+  listenAndServe(`:${env.get("PORT", "8080")}`, () => new Response("online", { status: 200 }));
 
 const serveBot = async () => {
   const triggers = (await readlines("triggers.txt")).concat(
