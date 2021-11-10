@@ -1,2 +1,0 @@
-run = "$HOME/.deno/bin/deno run --allow-net --allow-read --allow-env main.ts"
-language = "deno"
