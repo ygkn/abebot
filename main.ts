@@ -3,7 +3,7 @@ import {
   fromFileUrl,
   join,
 } from "https://deno.land/std@0.78.0/path/mod.ts";
-import { startBot } from "https://deno.land/x/discordeno/mod.ts";
+import { startBot } from "https://deno.land/x/discordeno@12.0.1/mod.ts";
 import { listenAndServe } from "https://deno.land/std@0.111.0/http/server.ts";
 import { Env } from "https://deno.land/x/env@v2.2.0/env.js";
 
