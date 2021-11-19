@@ -12,9 +12,7 @@ const env = new Env();
 const cwd = dirname(fromFileUrl(import.meta.url));
 
 const readlines = async (filename: string): Promise<string[]> =>
-  (
-    await Deno.readTextFile(join(cwd, filename))
-  )
+  (await Deno.readTextFile(join(cwd, filename)))
     .split("\n")
     .map((row) => row.trim().toLowerCase())
     .filter((row) => row);
@@ -54,9 +52,7 @@ const serveBot = async () => {
         if (
           triggers.some((trigger) => content.toLowerCase().includes(trigger))
         ) {
-          message.send(
-            responces[Math.floor(Math.random() * responces.length)],
-          );
+          message.send(responces[Math.floor(Math.random() * responces.length)]);
           return;
         }
       },
@@ -64,9 +60,4 @@ const serveBot = async () => {
   });
 };
 
-await Promise.all(
-  [
-    serveHttp(),
-    serveBot(),
-  ],
-);
+await Promise.all([serveHttp(), serveBot()]);
