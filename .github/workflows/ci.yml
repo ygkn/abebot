@@ -1,0 +1,22 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: denoland/setup-deno@main
+        with:
+          deno-version: "1.16.1"
+      - name: Run fmt
+        run: |
+          deno fmt --check
+      - name: Run lint
+        run: |
+          deno lint
+      - name: Ensure text is sorted
+        run: |
+          deno run --allow-read --allow-write sort-txt.ts
+          git diff --exit-code
