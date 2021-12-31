@@ -16,7 +16,7 @@ Promise.all(["abe.txt", "triggers.txt"].map(async (filename) => {
         .split("\n")
         .map((row) => row.trim().toLowerCase())
         .filter((row) => row)
-        .sort((a, b) => a.localeCompare(b)),
+        .sort(),
       "",
     ]
       .join("\n"),
