@@ -15,7 +15,7 @@ Trigger word availabe in [triggers.txt](./triggers.txt), and
 Invite **abebot** with
 [this link](https://discord.com/api/oauth2/authorize?client_id=902522751930224660&permissions=2048&scope=bot).
 
-## Contoribution
+## Contribution
 
 ### Add abe word / trigger word
 
