@@ -1,2 +1,2 @@
 language = "deno"
-run="$HOME/.deno/bin/deno run --allow-read --allow-env --allow-net main.ts"
+run="curl -fsSL https://deno.land/install.sh | sh && $HOME/.deno/bin/deno run --allow-read --allow-env --allow-net main.ts"
