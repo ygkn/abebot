@@ -26,7 +26,8 @@ const serveHttp = () =>
 
 const serveBot = async () => {
   const triggers = (await readlines("triggers.txt")).concat(
-    "<@!902522751930224660>", // @AbeBot
+    "<@902522751930224660>", // @abebot
+    "<@!902522751930224660>", // @abebot with nickname
   );
 
   const responces = await readlines("abe.txt");
