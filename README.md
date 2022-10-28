@@ -21,13 +21,12 @@ Invite **abebot** with
 
 1. Fork this repository
 2. Add new abe word / trigger word
-3. Sort lines with `deno run --allow-read --allow-write sort-txt.ts` to avoid
-   duplication
+3. Sort lines with `npm run sort-text` to avoid duplication
 4. Commit and send PR!
 
 ### Enhance / fix program
 
 1. Fork this repository
 2. Fix program
-3. Run `deno lint` and `deno fmt`
+3. Run `npm run code-check` and fix errors
 4. Commit and send PR!
