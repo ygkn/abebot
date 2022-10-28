@@ -6,7 +6,7 @@ import http from "node:http";
 
 dotenv.config();
 
-const appDirname = dirname(new URL(import.meta.url).pathname);
+const appDirname = join(dirname(new URL(import.meta.url).pathname), "..");
 
 const triggers = (await readFile(join(appDirname, "triggers.txt")))
   .toString()
