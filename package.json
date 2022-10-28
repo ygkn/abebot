@@ -15,7 +15,7 @@
     "format": "prettier --write ./**/*.{mts,ts,json}",
     "format:check": "prettier --check ./**/*.{mts,ts,json}",
     "code-check": "npm run lint && npm run format:check && npm run build",
-    "sort-text": "node --loader ts-node/esm sort-text.mts"
+    "sort-text": "node --loader ts-node/esm src/sort-text.mts"
   },
   "repository": {
     "type": "git",
