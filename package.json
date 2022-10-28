@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Bot of [@averak](https://github.com/averak)",
   "main": "out/main.mjs",
+  "engines": {
+    "node": ">=16.9.0"
+  },
   "scripts": {
     "dev": "node --loader ts-node/esm src/main.mts",
     "start": "node out/main.mjs",
