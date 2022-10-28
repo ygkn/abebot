@@ -2,10 +2,10 @@
   "name": "abebot",
   "version": "1.0.0",
   "description": "Bot of [@averak](https://github.com/averak)",
-  "main": "build/main.mjs",
+  "main": "out/main.mjs",
   "scripts": {
     "dev": "node --loader ts-node/esm main.mts",
-    "start": "node build/main.mjs",
+    "start": "node out/main.mjs",
     "build": "tsc",
     "lint": "eslint . --ext .mts",
     "lint:fix": "eslint . --ext .mts --fix",
