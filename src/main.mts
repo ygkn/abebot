@@ -30,6 +30,13 @@ const client = new Client({
 
 client.once("ready", () => {
   console.log("Bot is now ready!");
+
+  client.application!.commands.set([
+    {
+      name: "list-words",
+      description: "List all words",
+    },
+  ]);
 });
 
 client.on("messageCreate", async (message: Message) => {
@@ -49,6 +56,23 @@ client.on("messageCreate", async (message: Message) => {
     }
 
     message.channel.send(responce);
+  }
+});
+
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isCommand()) return;
+
+  if (interaction.commandName === "list-words") {
+    await interaction.reply({
+      content: [
+        "***trigger words:***",
+        ...triggers.map((trigger) => `**-** ${trigger}`),
+        "",
+        "***responce words:***",
+        ...responces.map((responce) => `**-** ${responce}`),
+      ].join("\n"),
+      ephemeral: true,
+    });
   }
 });
 
