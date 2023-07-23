@@ -65,11 +65,13 @@ client.on("interactionCreate", async (interaction) => {
   if (interaction.commandName === "list-words") {
     await interaction.reply({
       content: [
-        "***trigger words:***",
-        ...triggers.map((trigger) => `**-** ${trigger}`),
+        "## Trigger Words",
         "",
-        "***responce words:***",
-        ...responces.map((responce) => `**-** ${responce}`),
+        ...triggers.map((trigger) => `* ${trigger}`),
+        "",
+        "## Response Words",
+        "",
+        ...responces.map((responce) => `* ${responce}`),
       ].join("\n"),
       ephemeral: true,
     });
