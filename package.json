@@ -1,35 +1,35 @@
 {
-  "name": "abebot",
-  "version": "1.0.0",
-  "description": "Bot of [@averak](https://github.com/averak)",
-  "main": "out/main.mjs",
-  "scripts": {
-    "dev": "node --experimental-strip-types --env-file=.env src/main.mts",
-    "start": "node out/main.mjs",
-    "build": "tsc",
-    "check": "biome check .",
-    "fix": "biome check --write .",
-    "sort-text": "node --experimental-strip-types src/sort-text.mts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ygkn/abebot.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ygkn/abebot/issues"
-  },
-  "homepage": "https://github.com/ygkn/abebot#readme",
-  "private": true,
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@tsconfig/node22": "22.0.2",
-    "@tsconfig/strictest": "2.0.5",
-    "typescript": "5.8.3"
-  },
-  "dependencies": {
-    "discord.js": "14.19.3"
-  },
-  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
+	"name": "abebot",
+	"version": "1.0.0",
+	"description": "Bot of [@averak](https://github.com/averak)",
+	"main": "out/main.mjs",
+	"scripts": {
+		"dev": "node --experimental-strip-types --env-file=.env src/main.mts",
+		"start": "node out/main.mjs",
+		"build": "tsc",
+		"check": "biome check .",
+		"fix": "biome check --write .",
+		"sort-text": "node --experimental-strip-types src/sort-text.mts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ygkn/abebot.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ygkn/abebot/issues"
+	},
+	"homepage": "https://github.com/ygkn/abebot#readme",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tsconfig/node22": "22.0.2",
+		"@tsconfig/strictest": "2.0.5",
+		"typescript": "5.8.3"
+	},
+	"dependencies": {
+		"discord.js": "14.19.3"
+	},
+	"packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
 }
