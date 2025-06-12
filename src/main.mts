@@ -1,10 +1,12 @@
-import { Message, Client } from "discord.js";
-import dotenv from "dotenv";
 import { readFile } from "node:fs/promises";
-import { join, dirname } from "node:path";
 import http from "node:http";
-
-dotenv.config();
+import { dirname, join } from "node:path";
+import {
+  ChannelType,
+  Client,
+  GatewayIntentBits,
+  type Message,
+} from "discord.js";
 
 const appDirname = join(dirname(new URL(import.meta.url).pathname), "..");
 
@@ -15,7 +17,7 @@ const triggers = (await readFile(join(appDirname, "triggers.txt")))
   .filter((row) => row)
   .concat(
     `<@${process.env["DISCORD_BOT_ID"]}>`, // @abebot
-    `<@!${process.env["DISCORD_BOT_ID"]}>` // @abebot with nickname
+    `<@!${process.env["DISCORD_BOT_ID"]}>`, // @abebot with nickname
   );
 
 const responces = (await readFile(join(appDirname, "abe.txt")))
@@ -25,13 +27,18 @@ const responces = (await readFile(join(appDirname, "abe.txt")))
   .filter((row) => row);
 
 const client = new Client({
-  intents: ["Guilds", "GuildMessages", "MessageContent"],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.DirectMessages,
+  ],
 });
 
 client.once("ready", () => {
   console.log("Bot is now ready!");
 
-  client.application!.commands.set([
+  client.application?.commands.set([
     {
       name: "list-words",
       description: "List all words",
@@ -55,7 +62,13 @@ client.on("messageCreate", async (message: Message) => {
       throw new Error("人生最高！");
     }
 
-    message.channel.send(responce);
+    if (
+      message.channel.type === ChannelType.GuildText ||
+      message.channel.type === ChannelType.DM ||
+      message.channel.type === ChannelType.GuildAnnouncement
+    ) {
+      message.channel.send(responce);
+    }
   }
 });
 

@@ -6,14 +6,23 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
-      - run: npm ci
-      - name: code-check
-        run: npm run code-check
+          node-version-file: .node-version
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check
+        run: pnpm run check
+
+      - name: Build
+        run: pnpm run build
+
       - name: Ensure text is sorted
         run: |
-          npm run sort-text
+          pnpm run sort-text
           git diff --exit-code

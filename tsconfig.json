@@ -1,6 +1,7 @@
 {
-  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+  "extends": ["@tsconfig/strictest", "@tsconfig/node22"],
   "compilerOptions": {
     "outDir": "out"
-  }
+  },
+  "exclude": ["out", "node_modules"]
 }

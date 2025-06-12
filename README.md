@@ -21,12 +21,12 @@ Invite **abebot** with
 
 1. Fork this repository
 2. Add new abe word / trigger word
-3. Sort lines with `npm run sort-text` to avoid duplication
+3. Sort lines with `pnpm run sort-text` to avoid duplication
 4. Commit and send PR!
 
 ### Enhance / fix program
 
 1. Fork this repository
 2. Fix program
-3. Run `npm run code-check` and fix errors
+3. Run `pnpm run code-check` (includes linting with Biome, formatting check, and build) and fix errors
 4. Commit and send PR!
