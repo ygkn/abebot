@@ -23,7 +23,7 @@
 	"homepage": "https://github.com/ygkn/abebot#readme",
 	"private": true,
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.2.4",
 		"@tsconfig/node22": "22.0.2",
 		"@tsconfig/strictest": "2.0.5",
 		"typescript": "5.9.2"
