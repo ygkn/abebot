@@ -24,7 +24,7 @@
 	"private": true,
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@tsconfig/node22": "22.0.2",
+		"@tsconfig/node22": "22.0.3",
 		"@tsconfig/strictest": "2.0.7",
 		"typescript": "5.9.3"
 	},
