@@ -16,8 +16,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@tsconfig/node24':
-        specifier: 24.0.0
-        version: 24.0.0
+        specifier: 24.0.4
+        version: 24.0.4
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -128,8 +128,8 @@ packages:
     resolution: {integrity: sha512-xzvBr1Q1c4lCe7i6sRnrofxeO1QTP/LKQ6A6qy0iB4x5yfiSfARMEQEghojzTNALDTcv8En04qYNIco9/K9eZQ==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
 
-  '@tsconfig/node24@24.0.0':
-    resolution: {integrity: sha512-3/6Cr4dELEAucgPIr6ufY7yBYMi4ttZFOewABADNZ+bm4DUZl4dup2VBcBeP1ejj3QblrWVWux/1XcRv/ZVikA==}
+  '@tsconfig/node24@24.0.4':
+    resolution: {integrity: sha512-2A933l5P5oCbv6qSxHs7ckKwobs8BDAe9SJ/Xr2Hy+nDlwmLE1GhFh/g/vXGRZWgxBg9nX/5piDtHR9Dkw/XuA==}
 
   '@tsconfig/strictest@2.0.8':
     resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
@@ -294,7 +294,7 @@ snapshots:
 
   '@sapphire/snowflake@3.5.5': {}
 
-  '@tsconfig/node24@24.0.0': {}
+  '@tsconfig/node24@24.0.4': {}
 
   '@tsconfig/strictest@2.0.8': {}
 
