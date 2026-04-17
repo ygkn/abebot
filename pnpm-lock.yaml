@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       discord.js:
-        specifier: 14.26.2
-        version: 14.26.2
+        specifier: 14.26.3
+        version: 14.26.3
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -147,8 +147,8 @@ packages:
   discord-api-types@0.38.45:
     resolution: {integrity: sha512-DiI01i00FPv6n+hXcFkFxK8Y/rFRpKs6U6aP32N4T73nTbj37Eua3H/95TBpLktLWB6xnLXhYDGvyLq6zzYY2w==}
 
-  discord.js@14.26.2:
-    resolution: {integrity: sha512-feShi+gULJ6R2MAA4/KkCFnkJcuVrROJrKk4czplzq8gE1oqhqgOy9K0Scu44B8oGeWKe04egquzf+ia6VtXAw==}
+  discord.js@14.26.3:
+    resolution: {integrity: sha512-XEKtYn28YFsiJ5l4fLRyikdbo6RD5oFyqfVHQlvXz2104JhH/E8slN28dbky05w3DCrJcNVWvhVvcJCTSl/KIg==}
     engines: {node: '>=18'}
 
   fast-deep-equal@3.1.3:
@@ -306,7 +306,7 @@ snapshots:
 
   discord-api-types@0.38.45: {}
 
-  discord.js@14.26.2:
+  discord.js@14.26.3:
     dependencies:
       '@discordjs/builders': 1.14.1
       '@discordjs/collection': 1.5.3
